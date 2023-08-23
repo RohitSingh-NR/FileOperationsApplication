@@ -9,12 +9,23 @@ import java.util.Scanner;
 
 public class FileOperations {
 	
-	static String pathOfRootFolder = "/home/rohitsingh29vod/Desktop/RootFolder/";    //we can make it dynamic by taking path from user
+	static String pathOfRootFolder = "//home//rohitsingh29vod//Desktop//RootFolder//";    //we can make it dynamic by taking path from user
 	static File rootFolder = new File(pathOfRootFolder);                           // creating object of root folder path
 	static Scanner userInputAsInteger = new Scanner(System.in);
     static Scanner userInputAsString = new Scanner(System.in);
-	
-//========================================================================================
+    static int numberOfFiles;
+    
+    public static void checkRootFolder() {
+    	if(rootFolder.exists()) {
+    		System.out.println("Root Folder already exists no need to create");
+    	}
+    	else {
+    		rootFolder.mkdirs();
+    		System.out.println("Directory created successfully");
+    	}
+    }
+    
+ //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     
     //Display files in Root Directory
     
@@ -40,13 +51,13 @@ public class FileOperations {
 		System.out.println("===========================================================================");
 	}
 
-//======================================================================================
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	
 	// Add files to the existing Root Directory
 	
 	
 	public static void addFile() throws IOException {
-		int numberOfFiles;
+		
 		List<String> arrayToStoreFileNames = new ArrayList<>();
 		  do{                                                           //creating loop until we get the input as an integer
 	            try{
@@ -85,27 +96,47 @@ public class FileOperations {
           System.out.println("===========================================================================");
 
 	}
-	
-//===========================================================================
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	
 	// Deleting files from the existing Root Directory
 	
 	public static void deleteFile() {
+		 do{                                                           //creating loop until we get the input as an integer
+	            try{
+	            	System.out.println();
+	        System.out.print("---> How many files you want to Delete:- ");
+	        numberOfFiles = userInputAsInteger.nextInt();
+	        break;
+	            }
+	        catch(InputMismatchException e){
+	            System.out.println("please Enter a valid number");
+	            System.out.println();
+	            userInputAsInteger.next();// To clear the Scanner Buffer so that it will take a new value
+	        }
+	    }
+	        while(true);
 		System.out.println();
-		System.out.print("---> Enter the name of the File:- ");
+		System.out.println("---> Enter the name of the Files you want to delete:-");
+		for(int i=1; i<=numberOfFiles;i++) {
+		System.out.print(i+". ");
 		String fileToDelete = userInputAsString.nextLine();
 		File deleteFile = new File(rootFolder,fileToDelete);
 		if(deleteFile.exists()){
 			deleteFile.delete();
-            System.out.println("---> File deleted successfully");
+			System.out.println(fileToDelete+" File is deleted successfully");
+			System.out.println();
         }
 		else {
-			System.out.println("File Not Found or doesn't exist");
+			System.out.println(fileToDelete +" File Not Found or doesn't exist");
+			System.out.println();
+		}
 		}
 		System.out.println("===========================================================================");
 	}
 	
-//==========================================================================
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 	
 	//Searching file from the existing Root Directory
 	
