@@ -16,7 +16,8 @@ public class MainMenu extends FileOperations{
 	}
 
 	public static void main(String[] args) throws IOException {
-		
+		checkRootFolder();
+		System.out.println();
 		boolean toStopFirstLoop = true;
 		while(toStopFirstLoop!=false) {
 		waitForNextAction();
@@ -53,6 +54,7 @@ public class MainMenu extends FileOperations{
 					System.out.println("2. Delete files from the existing Root Directory List");
 					System.out.println("3. Search specific files from the existing Root Directory List");
 					System.out.println("4. Back to Main Menu");
+					System.out.println("5. Exit the Application");
 					System.out.println();
 					
 					
@@ -84,6 +86,13 @@ public class MainMenu extends FileOperations{
 								toStopSecondLoop=false;
 								System.out.println();
 								break;
+							
+							case 5:
+								
+								System.out.println();
+								System.out.println("Thanks for using my application :)");
+								System.out.println("Come Back Soon!!");
+								System.exit(0);
 								
 							default:
 								System.out.println("Invalid input");
