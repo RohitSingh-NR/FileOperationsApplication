@@ -9,21 +9,19 @@ import java.util.Scanner;
 
 public class FileOperations {
 	
-	// Please edit the pathofRootFolder before running the code
-	static String pathOfRootFolder = "//home//rohitsingh29vod//Desktop//RootFolder//";    //we can make it dynamic by taking path from user
-	static File rootFolder = new File(pathOfRootFolder);                           // creating object of root folder path
+		static String pathOfRootFolder;
+	static File rootFolder;                           // creating object of root folder path
 	static Scanner userInputAsInteger = new Scanner(System.in);
     static Scanner userInputAsString = new Scanner(System.in);
     static int numberOfFiles;
-    
-    public static void checkRootFolder() {
-    	if(rootFolder.exists()) {
-    		System.out.println("Root Folder already exists no need to create");
-    	}
-    	else {
-    		rootFolder.mkdirs();
-    		System.out.println("Directory created successfully");
-    	}
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Take Path of root directory from the user    
+    public static void rootFolderPathFromUser() {
+    	
+    	System.out.print("Enter your path of Root Directory:- ");
+    	pathOfRootFolder = userInputAsString.nextLine();
+    	rootFolder = new File(pathOfRootFolder);
     }
     
  //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
