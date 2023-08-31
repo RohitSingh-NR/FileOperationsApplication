@@ -56,7 +56,6 @@ public class MainMenu extends FileOperations{
 					System.out.println("Press 2. To Delete files from the existing Root Directory List");
 					System.out.println("Press 3. To Search specific files from the existing Root Directory List");
 					System.out.println("Press 4. To Back to Main Menu");
-					System.out.println("Press 5. To Exit the Application");
 					System.out.println();
 					
 					
@@ -88,14 +87,7 @@ public class MainMenu extends FileOperations{
 								toStopSecondLoop=false;
 								System.out.println();
 								break;
-							
-							case 5:
-								
-								System.out.println();
-								System.out.println("Thanks for using my application :)");
-								System.out.println("Come Back Soon!!");
-								System.exit(0);
-								
+															
 							default:
 								System.out.println("Invalid input");
 								waitForNextAction();
