@@ -3,15 +3,17 @@ package com.fileOps;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
 public class FileOperations {
 	
-		static String pathOfRootFolder;
-	static File rootFolder;                           // creating object of root folder path
-	static Scanner userInputAsInteger = new Scanner(System.in);
+    static String pathOfRootFolder;
+    static File rootFolder;                           // creating object of root folder path
+    static Scanner userInputAsInteger = new Scanner(System.in);
     static Scanner userInputAsString = new Scanner(System.in);
     static int numberOfFiles;
 
@@ -34,6 +36,7 @@ public class FileOperations {
 	        File[] filesInRootFolder = rootFolder.listFiles();                                        // creating an array to store the files present in given folder
 	            
 	            if(filesInRootFolder != null && filesInRootFolder.length > 0){
+	            	Arrays.sort(filesInRootFolder, Comparator.comparing(files -> files.getName().toLowerCase()));     //Sort the files in ascending order based on lowerCase file names
 	                System.out.println("---> Folder contains the following files:");
 	                for(File files : filesInRootFolder){                                             //Iterating files one by one
 	                    System.out.println(files.getName());
