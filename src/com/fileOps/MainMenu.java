@@ -16,8 +16,16 @@ public class MainMenu extends FileOperations{
 	}
 
 	public static void main(String[] args) throws IOException {
-        // Please edit the pathofRootFolder before running the code in FileOperations Class
-
+        
+		System.out.println("---------------------------------------------------------------------");
+		System.out.println();
+		System.out.println("                       Welcome to my Application");
+		System.out.println();
+		System.out.println("Application name:- File Operation Application");
+		System.out.println("Created by: Rohit Singh");
+		System.out.println();
+		System.out.println();
+		System.out.println("---------------------------------------------------------------------");
 		rootFolderPathFromUser();
 		System.out.println();
 		boolean toStopFirstLoop = true;
