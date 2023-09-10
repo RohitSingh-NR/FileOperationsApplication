@@ -14,7 +14,7 @@ These instructions will guide you through setting up and running the project on 
 ### Setup and Run
 
 1. Clone this repository to your local machine.
-```bash
+   ```bash
    git clone https://github.com/RohitSingh-NR/FileOperationsApplication.git
 
 2. There are two java Classes:
