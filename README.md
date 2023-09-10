@@ -18,18 +18,18 @@ These instructions will guide you through setting up and running the project on 
    git clone https://github.com/RohitSingh-NR/FileOperationsApplication.git
 
 2. There are two java Classes:
-   -- FileOperations.java consists of all the properties or fetures used in this application.
-   -- MainMenu.java consists main method that is to be executed to use the application.
+   - FileOperations.java consists of all the properties or fetures used in this application.
+   - MainMenu.java consists main method that is to be executed to use the application.
 
 3. Open the project in your chosen IDE (Below example given for Eclipse IDE).
    
-   -- Open Eclipse:
-   -- Launch the Eclipse IDE.
-   -- Import the Project:
-   -- Click on File -> Open Projects from File System...
-   -- Browse and select the folder where you cloned the repository (FileOperationsApplication).
-   -- Click Finish to import the project.
-   -- Run the Application:
+   - Open Eclipse:
+   - Launch the Eclipse IDE.
+   - Import the Project:
+   - Click on File -> Open Projects from File System...
+   - Browse and select the folder where you cloned the repository (FileOperationsApplication).
+   - Click Finish to import the project.
+   - Run the Application:
 
    - In Eclipse's Project Explorer, navigate to the src/com/fileOps directory.
    - Right-click on the MainMenu.java file.
