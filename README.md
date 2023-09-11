@@ -54,7 +54,7 @@ These instructions will guide you through setting up and running the project on 
 
    - The application will display a Welcome Page and ask for the Root Directory path
    - Please enter your Directory path where you want to perform operation
-      (ex: )
+      (like: /home/rohitsingh29vod/Desktop/RootFolder/)
    - After thet main menu with various file operation options will displayed.
    - Follow the on-screen instructions to interact with the application.
 
@@ -64,7 +64,7 @@ These instructions will guide you through setting up and running the project on 
 1. View Files: List all files in the specified directory.
 2. Add a New File: Create a new file in the specified directory.
 3. Delete a File: Delete a file if it exists in the directory.
-4. Search for a File: Search for a file based on search criteria (e.g., file name with extension).
+4. Search for a File: Search for a file based on search criteria (e.g., file name with extension, if applicable).
 5. Navigate to main menu
 6. Exit: Terminate the application.
 
