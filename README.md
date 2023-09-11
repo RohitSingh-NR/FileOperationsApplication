@@ -44,10 +44,12 @@ These instructions will guide you through setting up and running the project on 
    - Compile the Java Code:
      Compile the Java code using the javac command. You may compile individual files or compile all files together,
      depending on your needs. For example, to compile the MainMenu.java file:
+     
      $ javac MainMenu.java
 
    - Run the Application:
      Run the compiled Java class to start the application:
+     
      $ java MainMenu
 
 5. Follow the On-Screen Instructions:
