@@ -39,6 +39,7 @@ These instructions will guide you through setting up and running the project on 
 
    - Navigate to the Source Code:
      Change the current directory to the src/com/fileOps directory:
+     
      $ cd FileOperationsApplication/src/com/fileOps
 
    - Compile the Java Code:
